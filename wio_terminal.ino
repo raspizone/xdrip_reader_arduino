@@ -3,8 +3,8 @@
 #include <TFT_eSPI.h> // Librería para controlar la pantalla del Wio Terminal
 #include <ArduinoJson.h> // Incluye la librería ArduinoJson para manejar la respuesta JSON
 
-const char* ssid = "Pixel";      // Cambia "yourNetwork" por tu SSID
-const char* password = "wifipixel"; // Cambia "yourPassword" por tu contraseña
+const char* ssid = "";      // Cambia "yourNetwork" por tu SSID
+const char* password = ""; // Cambia "yourPassword" por tu contraseña
 
 TFT_eSPI tft = TFT_eSPI();  // Inicializa el objeto para la pantalla TFT
 
@@ -38,7 +38,7 @@ void loop() {
     HTTPClient http;
 
     // Configura la URL de destino
-    http.begin("http://192.168.173.175:17580/pebble");
+    http.begin("http://192.168.1.116:17580/pebble");
 
     // Envía la solicitud GET
     int httpCode = http.GET();
